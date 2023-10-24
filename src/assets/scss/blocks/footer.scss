@@ -1,0 +1,83 @@
+@import '../vars';
+@import '../mixins';
+
+.footer {
+  background-color: $colorFooter;
+  padding: 8rem 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav-part {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  &__nav-logo {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__nav .menu__list {
+    flex-direction: column;
+    color: $colorWhite;
+    gap: 2rem;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 8rem;
+  }
+
+  &__location {
+    color: $colorWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 0.1rem solid $colorBorder;
+    border-left: 0.1rem solid $colorBorder;
+    padding: 0 26rem 0 14rem;
+  }
+
+  &__tel {
+    @include sub-title;
+    color: $colorWhite;
+    div a {
+      &:hover {
+        color: $colorBg;
+      }
+    }
+  }
+
+  &__company {
+    @include text-sm;
+    & div:hover {
+      cursor: pointer;
+      @include color-opacity;
+    }
+  }
+
+  &__adress {
+    @include text;
+    & p a:hover {
+      cursor: pointer;
+      @include color-opacity;
+    }
+  }
+
+  &__social {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__icon {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-end;
+  }
+}

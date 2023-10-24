@@ -1,0 +1,120 @@
+@import "vars";
+@import "mixins";
+@import "vendor/reset";
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1920 * 10);
+
+  @include breakpoint($xl-bp) {
+    font-size: calc(100vw / 768 * 10);
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  color: $colorText;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: auto;
+  height: auto;
+}
+
+.swiper-slide {
+  height: 53.6rem !important;
+  width: 40rem !important;
+  @include breakpoint($xl-bp) {
+    height: 49.2rem !important;
+    width: 32rem !important;
+  }
+}
+
+form {
+  input {
+    padding: 1.9rem 0 1.9rem 2rem;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    width: 100%;
+    height: 6.4rem;
+    &::placeholder {
+      font-size: 1.8rem;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+a, a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 166rem;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 14rem;
+  height: 6rem;
+  flex-shrink: 0;
+  background: $colorWhite;
+}
+
+button {
+  border: none;
+}
+
+.element-animation-left {
+  opacity: 0;
+  transform: translateX(-40%);
+  transition-duration: 1s;
+}
+
+.element-animation-right {
+  opacity: 0;
+  transform: translateX(40%);
+  transition-duration: 1s;
+}
+
+.element-animation-left.element-show,
+.element-animation-right.element-show {
+  opacity: 1;
+  transform: translateX(0);
+  transition-duration: 1s;
+}
+
+.hover-image-scale {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.hover-image-scale img {
+  transition: 1s;
+  display: block;
+}
+
+.hover-image-scale img:hover {
+  transform: scale(1.2);
+}
+
+@import "importsBlocks";

@@ -1,0 +1,20 @@
+@import '../vars';
+@import '../mixins';
+
+.menu {
+  @include text-menu;
+  &__list {
+    display: flex;
+    gap: 6rem;
+    & li a {
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+      &:hover {
+        color: $colorBg;
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+        text-decoration-thickness: 0.15rem;
+      }
+    }
+  }
+}
+

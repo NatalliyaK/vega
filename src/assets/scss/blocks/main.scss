@@ -1,0 +1,373 @@
+@import '../vars';
+@import '../mixins';
+
+.main {
+  .about {
+    position: relative;
+    top: 11rem;
+
+    &__image {
+      width: 190rem;
+      height: 63rem;
+      flex-shrink: 0;
+    }
+
+    &__title {
+      @include title;
+      position: absolute;
+      top: 10rem;
+      width: 105rem;
+    }
+
+    &__button {
+      position: absolute;
+      bottom: 12rem;
+    }
+  }
+
+  .vega {
+    padding-top: 31rem;
+    &__title {
+      @include sub-title;
+      width: 92rem;
+    }
+
+    &__container {
+      display: flex;
+    }
+
+    &__container-text {
+      margin-top: 6rem;
+    }
+
+    &__text {
+      @include text-menu;
+    }
+  }
+
+  .innovation {
+    display: flex;
+    gap: 6rem;
+    padding-top: 20rem;
+
+    &__title {
+      @include sub-title;
+      width: 345rem;
+    }
+
+    &__subtitle {
+      @include text;
+      margin-bottom: 3rem;
+    }
+
+    &__text {
+      @include text-menu;
+    }
+
+    &__sity {
+      padding-top: 5rem;
+    }
+
+    &__countries {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &__marker {
+      width: 2.6rem;
+      height: 4rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__img {
+      margin-top: 8rem;
+      width: 166rem;
+      height: 50rem;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr 2fr;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        img {
+          transition: all .5s ease-in-out;
+        }
+
+        img:hover {
+          box-shadow: 1rem 1rem 0.5rem grey;
+          @include breakpoint($xl-bp) {
+            box-shadow: none;
+          }
+        }
+      }
+
+      img {
+        transition: all .5s ease-in-out;
+      }
+
+      img:hover {
+        box-shadow: 1rem 1rem 0.5rem grey;
+        @include breakpoint($xl-bp) {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .products {
+    &__tile {
+      @include title;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 20rem 0;
+      gap: 8rem;
+
+      button {
+        align-self: center;
+      }
+    }
+
+    &__container-img {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    &__description {
+      @include text;
+    }
+
+    &__card {
+      border: 1px solid #D3D1D0;
+      width: 40rem;
+      height: 53.6rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      div {
+        width: 36rem;
+        height: 30rem;
+        @include breakpoint($xl-bp) {
+          height: 30rem !important;
+          width: 28.8rem !important;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .categories {
+    &__title {
+      @include title;
+    }
+
+    &__wrapper {
+      background-color: $colorSection;
+      padding: 12rem 0;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__information {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+
+      .button {
+        align-self: center;
+      }
+    }
+
+    &__item {
+      @include text;
+      padding: 2rem 0;
+      border-bottom: 0.1rem solid $colorBorder;
+      width: 84rem;
+      display: flex;
+      justify-content: space-between;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $colorWhite;
+        padding: 1.8rem 4rem;
+
+        .categories__arrow {
+          display: block;
+        }
+      }
+    }
+
+    &__arrow {
+      display: none;
+      width: 3.2rem;
+      height: 3rem;
+    }
+
+    &__arrow {
+      display: none;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    &__img {
+      width: 95rem;
+      height: 78.8rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .video {
+    padding: 20rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+
+    &__title {
+      @include title;
+    }
+
+    &__svg {
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+
+    div {
+      width: 166rem;
+      height: 93.4rem;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20rem;
+
+    &__title {
+      @include title;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 13rem;
+    }
+
+    &__information {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+
+    &__location {
+      @include text;
+    }
+
+    &__tel {
+      @include sub-title;
+    }
+
+    &__social {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &__icon {
+      border: 0.1rem solid $colorBorder;
+      padding: 6rem 5.7rem 6.2rem 5.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 26rem;
+      height: 26rem;
+
+      div {
+        width: 6.4rem;
+        height: 6.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+        &:hover {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      span {
+        @include text;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+      &__form {
+        background-color: $colorSection;
+        padding: 10rem 14rem;
+        width: 82rem;
+        height: 80rem;
+      }
+
+      &__subtitle {
+        @include sub-title;
+        text-align: center;
+      }
+
+      &__form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        span {
+          @include text-sm;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+
+  }
+}

@@ -1,0 +1,77 @@
+@import '../vars';
+@import '../mixins';
+
+.button {
+  @include text;
+  width: 23.4rem;
+  height: 6.4rem;
+  padding: 2rem 4rem;
+  color: $colorWhite;
+  background-color: $colorBg;
+  transition: all .3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-8%);
+    box-shadow: 0.2rem 0.7rem 1.1rem rgba(0,0,0,0.5);
+  }
+
+  &--big {
+    width: 47rem;
+    &:hover {
+      box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+      background-color: darken($colorBg, 5%);
+      transform: translateY(2px);
+    }
+  }
+
+  &--medium {
+    width: 36rem;
+  }
+
+  &--bg {
+    @include text;
+    height: 6.4rem;
+    padding: 2rem 4rem;
+    color: $colorBg;
+    background-color: $colorWhite;
+    border: 0.2rem solid $colorBg;
+    width: 25.1rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: $colorBg;
+      transition: all .4s;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $colorWhite;
+
+      &:before {
+        left: 0;
+      }
+    }
+  }
+}
+
+
+.neon-btn:hover {
+  color: #527c82;
+  box-shadow: 0 0 10px 0 #527c82 inset, 0 0 10px 4px #527c82;
+}
+.neon-btn:hover, .neon-btn:focus {
+  outline: 0;
+}

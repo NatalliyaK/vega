@@ -1,0 +1,35 @@
+@mixin breakpoint($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin title {
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+@mixin sub-title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+@mixin text-menu {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 145%;
+}
+
+@mixin text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 135%;
+}
+
+@mixin text-sm {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 145%;
+}
