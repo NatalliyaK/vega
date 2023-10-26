@@ -38,3 +38,22 @@ if (elementsAnimationRight) {
 if(elementsAnimationLeft){
     animationElement(elementsAnimationLeft);
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+   const request = document.querySelectorAll('.request');
+   const popUp = document.querySelector('.pop-up__wrapper');
+
+    if(request) {
+        request.forEach(btn => {
+            console.log(btn)
+            btn.addEventListener('click', () => {
+                popUp.classList.add('right')
+            })
+        })
+
+        popUp.addEventListener('click', () => {
+            popUp.classList.remove('right')
+        })
+    }
+
+})

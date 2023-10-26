@@ -4,16 +4,37 @@
 <!-- -&#45;&#45;-->
 
 <div class="main">
-<!--    {{> pop-up}}-->
+    <!--    {{> pop-up}}-->
+    <section>
+        <div class="pop-up__wrapper">
+            <div class="pop-up__content">
+                <h2>Сделать запрос</h2>
+                <form class="pop-up__form">
+                    <label>
+                        <input type="text" name="name" placeholder="Ваше имя">
+                    </label>
+                    <label for="fone">
+                        <input type="tel" id="fone" name="phone" pattern="[+7]{2} [0-9]{3} [0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="+7 (___) __-__-__" required>
+                    </label>
+                    <button class="button button--big">Отправить</button>
+                    <span>Нажимая на кнопку, я даю согласие на обработку моих персональных данных и соглашаюсь с политикой конфиденциальности сайта</span>
+                </form>
+            </div>
+        </div>
+    </section>
     <section class="about">
         <div class="about__image">
             <img src="assets/images/main-bg.jpg" alt="image">
         </div>
-        <div class="wrapper">
-            <h1 class="about__title">Оборудование
-                для обработки стекла
-                и производства стеклопакетов</h1>
-            <button class="about__button button">Оставить заявку</button>
+        <div class="wrapper about__inform">
+            <div>
+                <h1 class="about__title">Оборудование<br>
+                    для обработки стекла
+                    и производства стеклопакетов</h1>
+            </div>
+            <div>
+                <button class="about__button button">Оставить заявку</button>
+            </div>
         </div>
     </section>
     <section class="wrapper vega">
@@ -23,7 +44,16 @@
                 <p class="vega__text">Мы занимается обслуживанием строительной стекольной и стеклоиспользующей промышленности. Специализируемся на производстве дверей-окон из энергосберегающего и теплоизоляционного стекла, линии по производству навесных фасадов и оборудования для глубокой обработки стекла.</p>
                 <p class="vega__text">С момента основания компании придерживаемся концепции инноваций и технологий, искреннего сервиса, честности и надежности. Производим большое количество первоклассного оборудования для обработки стеклопакетов. Продукция хорошо продается в стране и за рубежом, а некоторые изделия экспортируются в страны Европы, Америки и Юго-Восточной Азии.</p>
             </div>
-            <div></div>
+            <div class="vega__container-logo">
+                <div class="vega__logo_item">
+                    <div><img src="assets/images/logoWgm.jpg" alt="logo"></div>
+                </div>
+                <div class="vega__logo_item">
+                    <div>
+                        <img src="assets/images/logoVega.jpg" alt="logo">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="wrapper">
@@ -37,8 +67,7 @@
                     <div class="innovation__subtitle">Страна производства: Китай</div>
                 </div>
                 <p class="innovation__text">
-                    Мы занимается обслуживанием строительной стекольной и стеклоиспользующей промышленности. Специализируется на производстве дверей-окон из энергосберегающего и теплоизоляционного стекла, линии по производству навесных фасадов и оборудования для глубокой обработки стекла.
-                </p>
+                    Сильное сознание рыночной конкуренции позволяет нам всегда быть впереди передовых технологий. Мы предлагаем вам самый искренний сервис и превосходное качество. Мы развиваемся вместе с вами, рука об руку, чтобы создать будущее.                </p>
             </div>
         </div>
         <div class="innovation__img">
@@ -65,7 +94,7 @@
                                     </div>
                                 </div>
                                 <p class="products__description">Вертикальная автоматическая линия по производству стеклопакетов</p>
-                                <button class="button button--medium">Сделать запрос</button>
+                                <button class="button button--medium request">Сделать запрос</button>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -76,7 +105,7 @@
                                     </div>
                                     <p class="products__description">Вертикальный автоматический сверлильно-фрезерный станок с ЧПУ</p>
                                 </div>
-                                <button class="button button--medium">Сделать запрос</button>
+                                <button class="button button--medium request">Сделать запрос</button>
                             </div>
                         </div>
                         <div class="swiper-slide"><div class="products__card">
@@ -86,7 +115,7 @@
                                 </div>
                                 <p class="products__description">Стеклопакет машина для запечатывания полисульфида</p>
                             </div>
-                            <button class="button button--medium">Сделать запрос</button>
+                            <button class="button button--medium request">Сделать запрос</button>
                         </div></div>
                         <div class="swiper-slide"><div class="products__card">
                             <div class="products__card-container">
@@ -95,7 +124,7 @@
                                 </div>
                                 <p class="products__description">Автоматический робот для двухкомпонентного герметика 2500 мм</p>
                             </div>
-                            <button class="button button--medium">Сделать запрос</button>
+                            <button class="button button--medium request">Сделать запрос</button>
                         </div></div>
                         <div class="swiper-slide"><div class="products__card">
                             <div class="products__card-container">
@@ -104,7 +133,7 @@
                                 </div>
                                 <p class="products__description">LBW1800PB Линия по производству стеклопакетов синего цвета</p>
                             </div>
-                            <button class="button button--medium">Сделать запрос</button>
+                            <button class="button button--medium request">Сделать запрос</button>
                         </div></div>
                         <div class="swiper-slide"><div class="products__card">
                             <div class="products__card-container">
@@ -113,7 +142,7 @@
                                 </div>
                                 <p class="products__description">Weili стеклянная шайба и сушилка</p>
                             </div>
-                            <button class="button button--medium">Сделать запрос</button>
+                            <button class="button button--medium request">Сделать запрос</button>
                         </div></div>
                         <div class="swiper-slide"><div class="products__card">
                             <div class="products__card-container">
@@ -122,7 +151,7 @@
                                 </div>
                                 <p class="products__description">Бутиловый экструдер для производства стеклопакетов</p>
                             </div>
-                            <button class="button button--medium">Сделать запрос</button>
+                            <button class="button button--medium request">Сделать запрос</button>
                         </div></div>
                         <div class="swiper-slide"><div class="products__card">
                             <div class="products__card-container">
@@ -131,7 +160,7 @@
                                 </div>
                                 <p class="products__description">Алюминиевая проставка</p>
                             </div>
-                            <button class="button button--medium">Сделать запрос</button>
+                            <button class="button button--medium request">Сделать запрос</button>
                         </div></div>
                     </div>
 <!--                </div>-->
@@ -179,6 +208,10 @@
                                 <use href="#arrow"></use>
                             </svg></li>
                         <li class="categories__item">Машина для загрузки стеклопакетов
+                            <svg class="categories__arrow">
+                                <use href="#arrow"></use>
+                            </svg></li>
+                        <li class="categories__item">Машина для разгрузки стеклопакетов
                             <svg class="categories__arrow">
                                 <use href="#arrow"></use>
                             </svg></li>
@@ -232,7 +265,7 @@
                     </div>
                 </div>
                 <div class="contacts__location">
-                    Мытищи, ул. Летная, 19, оф. 355
+                    Мытищи, ул. Летная, 19, оф. 355 <br>
                     info@vegasd.ru
                 </div>
             </div>
@@ -240,8 +273,8 @@
                 <div class="contacts__icon">
                     <div class="contacts__whatsapp">
                         <a href="#">
-                            <svg class="footer__social">
-                                <use href="#footer-whatsapp"></use>
+                            <svg class="contacts__social">
+                                <use href="#footer-viber"></use>
                             </svg>
                         </a>
                     </div>
@@ -250,8 +283,8 @@
                 <div class="contacts__icon">
                     <div class="contacts__viber">
                         <a href="#">
-                            <svg class="footer__social">
-                                <use href="#footer-viber"></use>
+                            <svg class="contacts__social">
+                                <use href="#footer-whatsapp"></use>
                             </svg>
                         </a>
                     </div>

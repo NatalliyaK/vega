@@ -4,7 +4,7 @@ function initSwiper(swiper, perview) {
     if (checkSwiper) {
         new Swiper(swiper, {
             speed: 1000,
-            direction: 'horizontal',
+            // direction: 'horizontal',
             // spaceBetween: 20,
 
             grabCursor: true,
@@ -17,7 +17,7 @@ function initSwiper(swiper, perview) {
                     slidesPerView: 1.5,
                 },
                 1024: {
-                    slidesPerView: 3,
+                    slidesPerView: perview,
                 },
                 1920: {
                     slidesPerView: perview,

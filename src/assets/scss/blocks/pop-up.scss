@@ -1,2 +1,48 @@
 @import '../vars';
 @import '../mixins';
+
+.pop-up {
+  &__wrapper {
+    position: fixed;
+    right: -150%;
+    height: calc(100vh + 5%);
+    width: 100%;
+    background-color: rgba(35,24,31, 0.5);
+    transition: all 0.5s ease-in-out;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    width: 70rem;
+    background: $colorSection;
+    height: 100%;
+    padding: 10rem 8rem;
+
+    h2 {
+      @include sub-title;
+      text-align: center;
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    span {
+      @include text-sm;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.right {
+  right: 0;
+}

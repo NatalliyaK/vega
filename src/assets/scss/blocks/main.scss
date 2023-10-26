@@ -4,7 +4,7 @@
 .main {
   .about {
     position: relative;
-    top: 11rem;
+    top: 10rem;
 
     &__image {
       width: 190rem;
@@ -16,7 +16,14 @@
       @include title;
       position: absolute;
       top: 10rem;
-      width: 105rem;
+      width: 81rem;
+      margin-bottom: 4rem;
+    }
+
+    &__inform {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
 
     &__button {
@@ -26,7 +33,7 @@
   }
 
   .vega {
-    padding-top: 31rem;
+    padding-top: 28rem;
     &__title {
       @include sub-title;
       width: 92rem;
@@ -34,10 +41,43 @@
 
     &__container {
       display: flex;
+      gap: 20rem;
     }
 
     &__container-text {
       margin-top: 6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    &__container-logo {
+      display: flex;
+      padding-top: 1.5rem;
+    }
+
+    &__logo_item {
+      width: 40rem;
+      height: 40rem;
+      border-radius: 50%;
+      border: 0.1rem solid $colorBorder;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:nth-child(1) {
+          div {
+            width: 25.2rem;
+            height: 12.6rem;
+          }
+      }
+      &:nth-child(2) {
+        transform: translate(-10%);
+        div {
+          width: 20rem;
+          height: 10rem;
+        }
+      }
     }
 
     &__text {
@@ -47,30 +87,36 @@
 
   .innovation {
     display: flex;
-    gap: 6rem;
-    padding-top: 20rem;
+    padding-top: 15rem;
+    width: 100%;
 
     &__title {
       @include sub-title;
-      width: 345rem;
+      width: 68%;
     }
 
     &__subtitle {
       @include text;
-      margin-bottom: 3rem;
     }
 
     &__text {
       @include text-menu;
+      padding-left: 2rem;
     }
 
     &__sity {
-      padding-top: 5rem;
+      width: 50%;
+      padding-top: 7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
     }
 
     &__countries {
       display: flex;
       gap: 2rem;
+      align-items: flex-end;
+      padding-left: 2rem;
     }
 
     &__marker {
@@ -189,6 +235,7 @@
     &__container {
       display: flex;
       justify-content: space-between;
+      height: 79.8rem;
     }
 
     &__information {
@@ -203,7 +250,7 @@
 
     &__item {
       @include text;
-      padding: 2rem 0;
+      padding: 1.8rem 0;
       border-bottom: 0.1rem solid $colorBorder;
       width: 84rem;
       display: flex;
@@ -223,18 +270,11 @@
     &__arrow {
       display: none;
       width: 3.2rem;
-      height: 3rem;
-    }
-
-    &__arrow {
-      display: none;
-      width: 3.2rem;
-      height: 3.2rem;
+      height: 2.5rem;
     }
 
     &__img {
       width: 95rem;
-      height: 78.8rem;
 
       img {
         width: 100%;
@@ -301,6 +341,11 @@
       @include text;
     }
 
+    &__social {
+      width: 6rem;
+      height: 6rem;
+    }
+
     &__tel {
       @include sub-title;
     }
@@ -337,7 +382,8 @@
       span {
         @include text;
         text-align: center;
-
+        width: 14.5rem;
+        
         &:hover {
           cursor: pointer;
         }

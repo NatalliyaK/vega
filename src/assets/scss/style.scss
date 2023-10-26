@@ -71,6 +71,9 @@ img {
 .wrapper {
   max-width: 166rem;
   margin: 0 auto;
+  @include breakpoint($sm-bp) {
+    max-width: 34.3rem;
+  }
 }
 
 .logo {
@@ -78,6 +81,13 @@ img {
   height: 6rem;
   flex-shrink: 0;
   background: $colorWhite;
+  &:hover {
+    cursor: pointer;
+  }
+  @include breakpoint($xl-bp) {
+    width: 7.4rem;
+    height: 3.1rem;
+  }
 }
 
 button {
