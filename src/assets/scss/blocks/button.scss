@@ -16,19 +16,6 @@
     box-shadow: 0.2rem 0.7rem 1.1rem rgba(0,0,0,0.5);
   }
 
-  &--big {
-    width: 47rem;
-    &:hover {
-      box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
-      background-color: darken($colorBg, 5%);
-      transform: translateY(2px);
-    }
-  }
-
-  &--medium {
-    width: 36rem;
-  }
-
   &--bg {
     @include text;
     height: 6.4rem;
@@ -65,13 +52,23 @@
       }
     }
   }
-}
 
+  &--big {
+    width: 47rem;
+    &:hover {
+      box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+      background-color: darken($colorBg, 5%);
+      transform: translateY(2px);
+    }
+    @include breakpoint($xl-bp) {
+      width: 34rem;
+    }
+  }
 
-.neon-btn:hover {
-  color: #527c82;
-  box-shadow: 0 0 10px 0 #527c82 inset, 0 0 10px 4px #527c82;
-}
-.neon-btn:hover, .neon-btn:focus {
-  outline: 0;
+  &--medium {
+    width: 36rem;
+    @include breakpoint($xl-bp) {
+      width: 34rem;
+    }
+  }
 }

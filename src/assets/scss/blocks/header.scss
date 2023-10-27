@@ -7,6 +7,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include breakpoint($xl-bp) {
+    padding: 1.5rem 0 1.4rem;
+  }
 
   &__wrapper {
     position: fixed;
@@ -41,20 +44,53 @@
     color: $colorBg;
   }
 
+  &__mob {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 16.5rem;
+    left: -150%;
+    height: calc(100vh + 5%);
+    width: 100%;
+    background-color: $colorSection;
+    transition: all 0.5s ease-in-out;
+    top: 0;
+    right: 0;
+    padding: 6rem 1.6rem 3rem;
+
+    span {
+      @include text-menu;
+    }
+
+    .menu .menu__list {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: space-between;
+    }
+  }
+
   &__menu-mob {
-    display: none;
     width: 3.2rem;
     height: 1.2rem;
-    //display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
+    z-index: 100;
+    &.active {
+      position: relative;
+    }
 
     span {
       width: 100%;
-      height: 2px;
+      height: 1px;
       background-color: $colorText;
       transition: all 0.3s;
       border-radius: 1.2rem;
+      border: 1px solid $colorText;
+      transform-origin: center;
+
 
       &:nth-child(1) {
         width: 70%;
@@ -67,5 +103,13 @@
       }
     }
 
+    @include breakpoint($xl-bp) {
+      display: flex;
+    }
+
   }
+}
+
+.left {
+  left: 0;
 }

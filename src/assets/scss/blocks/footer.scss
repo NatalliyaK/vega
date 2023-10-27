@@ -4,21 +4,36 @@
 .footer {
   background-color: $colorFooter;
   padding: 8rem 0;
+  @include breakpoint($xl-bp) {
+    padding: 6rem 0;
+  }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__nav-part {
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    @include breakpoint($xl-bp) {
+      flex-direction: row;
+      gap: 8rem;
+    }
   }
 
   &__nav-logo {
     display: flex;
     gap: 2rem;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+    }
   }
 
   &__nav .menu__list {
@@ -32,6 +47,13 @@
     flex-direction: column;
     justify-content: space-between;
     padding-left: 8rem;
+    @include breakpoint($xl-bp) {
+      border-top: 0.1rem solid $colorBorder;
+      border-bottom: 0.1rem solid $colorBorder;
+      order: 3;
+      padding: 6rem 0;
+      gap: 3rem;
+    }
   }
 
   &__location {
@@ -42,6 +64,13 @@
     border-right: 0.1rem solid $colorBorder;
     border-left: 0.1rem solid $colorBorder;
     padding: 0 14.5rem 0 8rem;
+    @include breakpoint($xl-bp) {
+      border-right: none;
+      border-left: none;
+      order: 4;
+      padding: 6rem 0;
+      gap: 3rem;
+    }
   }
 
   &__tel {
@@ -79,5 +108,8 @@
     display: flex;
     gap: 3rem;
     align-items: flex-end;
+    @include breakpoint($xl-bp) {
+      transform: translate(-12rem, -3.6rem);
+    }
   }
 }

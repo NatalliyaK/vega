@@ -42,10 +42,10 @@ if(elementsAnimationLeft){
 window.addEventListener("DOMContentLoaded", () => {
    const request = document.querySelectorAll('.request');
    const popUp = document.querySelector('.pop-up__wrapper');
+    const header = document.querySelector('.header');
 
     if(request) {
         request.forEach(btn => {
-            console.log(btn)
             btn.addEventListener('click', () => {
                 popUp.classList.add('right')
             })
@@ -54,6 +54,20 @@ window.addEventListener("DOMContentLoaded", () => {
         popUp.addEventListener('click', () => {
             popUp.classList.remove('right')
         })
+    }
+
+    if(header) {
+      const headerMenuMob = document.querySelector('.header__menu-mob');
+      const span = document.querySelector('.span');
+      const headerMobList = document.querySelector('.header__mob');
+
+        headerMenuMob.addEventListener('click', () => {
+            headerMenuMob.classList.toggle('active')
+            span.classList.toggle('active')
+            headerMobList.classList.toggle('left')
+        })
+
+
     }
 
 })
